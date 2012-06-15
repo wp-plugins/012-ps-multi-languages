@@ -12,17 +12,17 @@ makes this plugin easy to build multilingual sites.
 multi site OK.
 
 = Functions =
-1.wordpress site multilingualization
-2.One URL
-3.Coverage category,tags,taxonomy,post,page,custom post type,site
+*1.wordpress site multilingualization
+*2.One URL
+*3.Coverage category,tags,taxonomy,post,page,custom post type,site
 
 = Usage =
-1.General Settings : Site Name , Tagline, keywod
-2.Taxonomy : category, tag, custom taxonomy
-3.Post : page, post, custom post type
-4.List : wp_list_pages wp_nav_menu
-5.Bread Crumb : <?php if ( function_exists( 'pml_bread_crumb' ) ) pml_bread_crumb(); ?>
-6.Languages List : <?php if ( function_exists( 'pml_multilingual_list' ) ) pml_multilingual_list(); ?>
+*1.General Settings : Site Name , Tagline, keywod
+*2.Taxonomy : category, tag, custom taxonomy
+*3.Post : page, post, custom post type
+*4.List : wp_list_pages wp_nav_menu
+*5.Bread Crumb : 
+*6.Languages List : 
 
 == Installation ==
 
@@ -32,6 +32,12 @@ multi site OK.
    make dir 012-m17n-config in /wp-content/ and move setting files to  /wp-content/012-m17n-config/config
    * priority is hight of /wp-content/012-m17n-config/setting files
 3. Go to plugins list and activate "012 Ps Multi Languages". 
+
+= Examples =
+**Default**<br />
+<?php if ( function_exists( 'pml_bread_crumb' ) ) pml_bread_crumb(); ?>
+
+<?php if ( function_exists( 'pml_multilingual_list' ) ) pml_multilingual_list(); ?>
 
 == Changelog ==
 = Version 1.0 (15-06-2012) =
