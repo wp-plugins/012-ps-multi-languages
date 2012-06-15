@@ -3,7 +3,7 @@
 Plugin Name: 012 PS Multi Languages
 Plugin URI: http://wordpress.org/extend/plugins/012-ps-multi-languages/
 Description: Manager Multilingual Wordpress for one URL 
-Author: ouhinit (oh@prime-strategy.co.jp)
+Author: Wang Bin (oh@prime-strategy.co.jp)
 Version: 1.1
 Author URI: http://www.prime-strategy.co.jp/about/staff/oh/
 */
