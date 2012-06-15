@@ -6,23 +6,23 @@ Tested up to: 3.3.2
 
 wordpress multilingualization.
 == Description ==
-*Manager multi-language Web site for　one URL.
-*Easy to setting config file realization multi-language Web for Manager.
-*makes this plugin easy to build multilingual sites.multi site OK.
+* Manager multi-language Web site for　one URL.
+* Easy to setting config file realization multi-language Web for Manager.
+* makes this plugin easy to build multilingual sites.multi site OK.
 
 
 = Functions =
-*1.wordpress site multilingualization
-*2.One URL
-*3.Coverage category,tags,taxonomy,post,page,custom post type,site
+* 1.wordpress site multilingualization
+* 2.One URL
+* 3.Coverage category,tags,taxonomy,post,page,custom post type,site
 
 = Usage =
-*1.General Settings : Site Name , Tagline, keywod
-*2.Taxonomy : category, tag, custom taxonomy
-*3.Post : page, post, custom post type
-*4.List : wp_list_pages wp_nav_menu
-*5.Bread Crumb : 
-*6.Languages List : 
+* 1.General Settings : Site Name , Tagline, keywod
+* 2.Taxonomy : category, tag, custom taxonomy
+* 3.Post : page, post, custom post type
+* 4.List : wp_list_pages wp_nav_menu
+* 5.Bread Crumb : 
+* 6.Languages List : 
 
 == Installation ==
 
