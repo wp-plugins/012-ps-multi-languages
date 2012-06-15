@@ -42,3 +42,10 @@ wordpress multilingualization.
 == Changelog ==
 = Version 1.0 (15-06-2012) =
 * PUBLISH: [012 ps multi languages] release
+
+
+== Screenshots ==
+1. category list
+2. add category
+3. post list
+4. edit post/page
