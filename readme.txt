@@ -26,12 +26,12 @@ wordpress multilingualization.
 
 == Installation ==
 
-1. Upload the 012 Ps Multi Languages folder to the plugins directory in your WordPress installation
-2. You can Sample file from (_config.php), to add the multilingual and rename from  _config.php to config.php( if multi site can config-$blog_id.php )
+* 1. Upload the 012 Ps Multi Languages folder to the plugins directory in your WordPress installation
+* 2. You can Sample file from (_config.php), to add the multilingual and rename from  _config.php to config.php( if multi site can config-$blog_id.php )
    or 
    make dir 012-m17n-config in /wp-content/ and move setting files to  /wp-content/012-m17n-config/config
    * priority is hight of /wp-content/012-m17n-config/setting files
-3. Go to plugins list and activate "012 Ps Multi Languages". 
+* 3. Go to plugins list and activate "012 Ps Multi Languages". 
 
 = Examples =
 **Default**<br />
