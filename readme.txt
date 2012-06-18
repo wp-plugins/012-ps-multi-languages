@@ -1,8 +1,8 @@
 === 012 Ps Multi Languages ===
 Contributors: ouhinit
 Tags: multilingual,multi languages, multilingualization, m17n,wpml, i18n
-Requires at least: 1.0
-Tested up to: 3.3.2
+Requires at least: 3.3.x
+Tested up to: 3.4
 
 wordpress multilingualization.
 == Description ==
@@ -43,7 +43,7 @@ wordpress multilingualization.
 == Changelog ==
 = Version 1.0 (15-06-2012) =
 * PUBLISH: [012 ps multi languages] release
-
+* MESSAGE: [012 ps multi languages] 3.4 Validated
 
 == Screenshots ==
 1. category list
