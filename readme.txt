@@ -8,7 +8,8 @@ wordpress multilingualization.
 == Description ==
 * Manager multi-language Web site for　one URL.
 * Easy to setting config file realization multi-language Web for Manager.
-* makes this plugin easy to build multilingual sites.multi site OK.
+* Use this plugin easy to build multilingual sites.
+* Multi site OK.
 
 
 = Functions =
