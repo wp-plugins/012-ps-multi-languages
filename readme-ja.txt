@@ -36,3 +36,4 @@ One URLより多国語化を関する、簡単にConfigファイルを設定し�
 == Changelog ==
 = Version 1.0 (15-06-2012) =
 * PUBLISH: [012 ps multi languages] リリース
+* MESSAGE: [012 ps multi languages] 3.4 Validated
