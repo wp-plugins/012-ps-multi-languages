@@ -35,3 +35,4 @@ wordpress multilingualization.
 == Changelog ==
 = Version 1.0 (15-06-2012) =
 * PUBLISH: [012 ps multi languages] 公布
+* MESSAGE: [012 ps multi languages] 3.4 验证完了
