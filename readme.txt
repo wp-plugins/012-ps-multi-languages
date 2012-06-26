@@ -36,7 +36,7 @@ wordpress multilingualization.
 
 = Examples =
 **Default**<br />
-<?php if ( function_exists( 'pml_bread_crumb' ) ) pml_bread_crumb(); ?>
+<?php if ( function_exists( 'ps_012_m17n_bread_crumb' ) ) ps_012_m17n_bread_crumb(); ?>
 
 <?php if ( function_exists( 'pml_multilingual_list' ) ) pml_multilingual_list(); ?>
 
