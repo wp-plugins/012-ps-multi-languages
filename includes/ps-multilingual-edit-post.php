@@ -281,10 +281,7 @@ EOF;
         $post_ml_content = get_post_meta($post->ID,'post_content_' . $lang , true );
 
         $Content = __('Content');
-        $inside = <<< EOF 
-        <h4 class="cf_title" >{$this->_items[$lang]} {$Content}</h4>
-EOF;
-        echo $inside;
+
         wp_editor( $post_ml_content, "ml_post_content_{$lang}" , $atts );
         return;
 
