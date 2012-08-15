@@ -92,6 +92,10 @@ div.multi_checkbox div.inside p.ml_input input.data,
 div.multi_checkbox div.inside p.ml_input span.default {
 	display: none;
 }
+input.data {
+    width: 100%;
+    overflow: hidden;
+}
 div.multi_checkbox div.inside p.ml_input label {
 	margin-right: 10px;
 }

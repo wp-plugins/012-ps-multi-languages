@@ -106,7 +106,7 @@ Class ps_multilingual_edit_post {
 	*/	
 	function add_admin_print_styles( ){
 
-		wp_enqueue_script( 'prefix-js-tinyMCEID' , plugins_url('js/tinyMCEID.js', __FILE__) );
+		//wp_enqueue_script( 'prefix-js-tinyMCEID' , plugins_url('js/tinyMCEID.js', __FILE__) );
 				
 		wp_enqueue_script( 'prefix-js-' . strtolower(__CLASS__) , plugins_url('js/edit-post-prefix-js.js', __FILE__) );
 		
@@ -260,8 +260,35 @@ EOF;
 	* @return 
 	*/	
 	function add_multilingual_content( $lang, $post = null ){
+
+        $defaults = array(    
+            'tabindex'      => 1,
+            'wpautop'       => true,
+            'media_buttons' => true,
+            'textarea_name' => 'content',
+            'textarea_rows' => get_option('default_post_edit_rows', 10), // rows="..."                
+            'tabindex'      => '',         
+            'editor_css'    => '', // intended for extra styles for both visual and HTML editors buttons, needs to include the <style> tags, can use "scoped".        
+            'editor_class'  => '', // add extra class(es) to the editor textarea        
+            'teeny'         => false, // output the minimal editor config used in Press This        
+            'dfw'           => false, // replace the default fullscreen with DFW (needs specific DOM elements and css)        
+            'tinymce'       => true, // load TinyMCE, can be used to pass settings directly to TinyMCE using an array()        
+            'quicktags'     => true, // load Quicktags, can be used to pass settings directly to Quicktags using an array()        
+            'textarea_name' => "ml_post_content_{$lang}"
+        );  
+
+        $atts = wp_parse_args( $args, $defaults );
+        $post_ml_content = get_post_meta($post->ID,'post_content_' . $lang , true );
+
+        $Content = __('Content');
+        $inside = <<< EOF 
+        <h4 class="cf_title" >{$this->_items[$lang]} {$Content}</h4>
+EOF;
+        echo $inside;
+        wp_editor( $post_ml_content, "ml_post_content_{$lang}" , $atts );
+        return;
 		
-		$Add_Media = __('Add Media');
+		/*$Add_Media = __('Add Media');
 		$Upload_Insert = sprintf(__('Upload/Insert %s'),'');
 		$Visual = __('Visual');
 		$Content = __('Content');
@@ -311,7 +338,7 @@ EOF;
 			</div>
 		</div>
 EOF;
-		echo $inside;
+		echo $inside;*/
 	}
 	
 	/**
