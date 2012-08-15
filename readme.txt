@@ -47,6 +47,7 @@ wordpress multilingualization.
 = Version 1.2 (16-08-2012) =
 * MESSAGE: [012 ps multi languages] 1.2 setting multilingual title's size (includescss/edit-post-prefix-style.css)
 * MESSAGE: [012 ps multi languages] 1.2 used wp_editor to  function add_multilingual_content (includes/ps-multilingual-edit-post.php)
+* Fix    : fixed error
 
 == Screenshots ==
 1. category list
