@@ -44,6 +44,9 @@ wordpress multilingualization.
 = Version 1.0 (15-06-2012) =
 * PUBLISH: [012 ps multi languages] release
 * MESSAGE: [012 ps multi languages] 3.4 Validated
+= Version 1.2 (16-08-2012) =
+* MESSAGE: [012 ps multi languages] 1.2 setting multilingual title's size (includescss/edit-post-prefix-style.css)
+* MESSAGE: [012 ps multi languages] 1.2 used wp_editor to  function add_multilingual_content (includes/ps-multilingual-edit-post.php)
 
 == Screenshots ==
 1. category list
