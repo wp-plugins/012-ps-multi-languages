@@ -287,7 +287,7 @@ EOF;
         echo $inside;
         wp_editor( $post_ml_content, "ml_post_content_{$lang}" , $atts );
         return;
-		
+
 		/*$Add_Media = __('Add Media');
 		$Upload_Insert = sprintf(__('Upload/Insert %s'),'');
 		$Visual = __('Visual');
