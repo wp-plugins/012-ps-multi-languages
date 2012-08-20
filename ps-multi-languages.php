@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /*
 Plugin Name: 012 PS Multi Languages
 Plugin URI: http://wordpress.org/extend/plugins/012-ps-multi-languages/
@@ -1127,7 +1127,7 @@ class ps_multi_languages{
 			if ( $search_results ){
 				$bread_crumb_arr[] = array( 'title' => sprintf( $search_results . ' &#8220;%s&#8221;' , $_GET['s'] ), 'link' => false );
 			}else{
-				$bread_crumb_arr[] = array( 'title' => sprintf( __('Search results for &#8220;%s&#8221;') . '「%s」' , $_GET['s'] ), 'link' => false );
+				$bread_crumb_arr[] = array( 'title' => sprintf( __('Search results for &#8220;%s&#8221;')  , $_GET['s'] ), 'link' => false );
 			}
 		} elseif ( is_tax() ) {//oh start 2011/08/04
 				//カスタム投稿タイプを取得する
