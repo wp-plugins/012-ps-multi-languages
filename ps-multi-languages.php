@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 /*
 Plugin Name: 012 PS Multi Languages
 Plugin URI: http://wordpress.org/extend/plugins/012-ps-multi-languages/
