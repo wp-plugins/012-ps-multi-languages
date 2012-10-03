@@ -64,7 +64,7 @@
 	* @param string $url
 	* @return Boolean true/false
 	*/	
-	function url_exists($url) {
+	function ps_url_exists($url) {
 	    if (!$fp = curl_init($url)) return false;
 	    return true;
 	}
