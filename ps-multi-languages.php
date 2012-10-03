@@ -852,7 +852,7 @@ class ps_multi_languages{
 	function regist_contact_info_field() {
 		
 		$flag_icon = $this->flags_dir . $this->WPLANGKEY . '.png';
-			if ( url_exists( $flag_icon )):
+			if ( ps_url_exists( $flag_icon )):
 				$flag_icon = '<img src="' .  $flag_icon. '">&nbsp; ';	
 			endif;
 		add_settings_field( 'hr_' . $this->WPLANGKEY , $flag_icon   , array($this , 'display_option_general_hr' ), 'general' , 'default' , array($this->WPLANGKEY));
@@ -861,7 +861,7 @@ class ps_multi_languages{
 
 		foreach ( $this->multilingual as $key => $lang ):
 			$flag_icon = $this->flags_dir . $key . '.png';
-			if ( url_exists( $flag_icon )):
+			if ( ps_url_exists( $flag_icon )):
 				$flag_icon = '<img src="' .  $flag_icon. '">&nbsp; ';	
 			endif;
 			add_settings_field( 'hr_' . $key , $flag_icon  .  $lang  , array($this , 'display_option_general_hr' ), 'general' , 'default' , array($key));
