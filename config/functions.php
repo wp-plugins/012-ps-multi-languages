@@ -16,7 +16,7 @@
 	* @param string $html/$multilingual_snippet
 	* @return
 	*/
-	function ps_012_multilingual_list( $echo = false, $lang = null ){
+	function ps_012_multilingual_list( $echo = true, $lang = null ){
 		global $ps_multi_languages;
 
 	 	$multilingual_snippet = $ps_multi_languages->ps_012_multilingual_list( $lang );
