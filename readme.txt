@@ -48,6 +48,7 @@ wordpress multilingualization.
 * MESSAGE: [012 ps multi languages] 1.2 setting multilingual title's size (includescss/edit-post-prefix-style.css)
 * MESSAGE: [012 ps multi languages] 1.2 used wp_editor to  function add_multilingual_content (includes/ps-multilingual-edit-post.php)
 * Fix    : fixed error
+* Fix    : [012 ps multi languages] 1.3 update add_action('the_posts'	to add_filter('the_posts'	.  add add_filter('pre_get_posts') fore function get_posts .
 
 == Screenshots ==
 1. category list

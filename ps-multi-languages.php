@@ -4,7 +4,7 @@ Plugin Name: 012 PS Multi Languages
 Plugin URI: http://wordpress.org/extend/plugins/012-ps-multi-languages/
 Description: Manager Multilingual Wordpress for one URL 
 Author: Wang Bin (oh@prime-strategy.co.jp)
-Version: 1.2
+Version: 1.3
 Author URI: http://www.prime-strategy.co.jp/about/staff/oh/
 */
 
@@ -154,6 +154,7 @@ class ps_multi_languages{
 			//add_action( 'admin_footer-post.php'							, array( &$this, 'add_admin_print_styles' ) );
 			add_action( 'admin_print_styles-edit-tags.php'				, array( &$this, 'add_admin_print_styles' ) 				);			
 		else:
+			add_filter('pre_get_posts'									, array( &$this , 'ps_multilingual_pre_get_posts' ) );
 			//add_action( 'init'											, array( &$this, 'ps_init_multilingua' ) 				);
 			//カテゴリー、タグ、タクソノミー
 			add_filter( 'get_terms' 									, array( &$this, 'ps_multilingual_get_terms') 		, 10 , 3);
@@ -177,7 +178,7 @@ class ps_multi_languages{
 			
 			add_filter('wp_title' 										, array( &$this, 'ps_wp_title_multilingual' ) 		, 10 , 2);
 			add_filter('single_post_title' 								, array( &$this, 'ps_single_post_title_multilingual'),10 , 2);
-			add_action('the_posts'										, array( &$this, 'ps_012_m17n_the_posts')			, 10 , 2);
+			add_filter('the_posts'										, array( &$this, 'ps_012_m17n_the_posts')			, 10 , 2);
 			
 			//検索対応
 			add_filter('pre_get_posts'									, array( &$this , 'ps_012_m17n_search' ) 					);
@@ -1334,6 +1335,19 @@ class ps_multi_languages{
 			$ancestors = $this->get_category_ancestors( $cat->parent, $ancestors );
 		}
 		return $ancestors;
+	}
+
+	/**
+	* ファンクション名：ps_multilingual_pre_get_posts
+	* 機能概要：フィルター処理を行う場合はfalseを指定(the_postsのため)
+	* 作成：
+	* 変更：
+	* @param Object $pre
+	* @return Object $pre
+	*/	
+	function ps_multilingual_pre_get_posts( $pre ){
+		$pre->query_vars['suppress_filters'] = false;
+		return $pre;
 	}
 	
 }//class end
