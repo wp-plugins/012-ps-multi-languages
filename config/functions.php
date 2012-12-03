@@ -65,7 +65,9 @@
 	* @return Boolean true/false
 	*/	
 	function ps_url_exists($url) {
-	    if (!$fp = curl_init($url)) return false;
+		if ( extension_loaded('curl') ){
+	    	if (!$fp = curl_init($url)) return false;
+		}
 	    return true;
 	}
 	
