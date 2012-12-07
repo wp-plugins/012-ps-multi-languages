@@ -4,7 +4,7 @@ Plugin Name: 012 PS Multi Languages
 Plugin URI: http://wordpress.org/extend/plugins/012-ps-multi-languages/
 Description: Manager Multilingual Wordpress for one URL 
 Author: Wang Bin (oh@prime-strategy.co.jp)
-Version: 1.3
+Version: 1.4
 Author URI: http://www.prime-strategy.co.jp/about/staff/oh/
 */
 
@@ -858,7 +858,7 @@ class ps_multi_languages{
 			endif;
 		add_settings_field( 'hr_' . $this->WPLANGKEY , $flag_icon   , array($this , 'display_option_general_hr' ), 'general' , 'default' , array($this->WPLANGKEY));
 		
-		add_settings_field( 'keyword_en' ,  __('Term')  , array($this , 'display_keyword_info' ), 'general' , 'default' , array($this->WPLANGKEY));
+		add_settings_field( 'keyword_' . $this->WPLANGKEY ,  __('Keyword')  , array($this , 'display_keyword_info' ), 'general' , 'default' , array($this->WPLANGKEY));
 
 		foreach ( $this->multilingual as $key => $lang ):
 			$flag_icon = $this->flags_dir . $key . '.png';
@@ -868,7 +868,7 @@ class ps_multi_languages{
 			add_settings_field( 'hr_' . $key , $flag_icon  .  $lang  , array($this , 'display_option_general_hr' ), 'general' , 'default' , array($key));
 			add_settings_field( 'blogname_' . $key ,  __('Site Title')  , array($this , 'display_blogname_info' ), 'general' , 'default' , array($key));
 			add_settings_field( 'blogdescription_' . $key , __('Site Tagline')  , array($this , 'display_blogdescription_info' ), 'general' , 'default' , array($key));
-			add_settings_field( 'keyword_' . $key , __('Term')  , array($this , 'display_keyword_info' ), 'general' , 'default' , array($key));
+			add_settings_field( 'keyword_' . $key , __('Keyword')  , array($this , 'display_keyword_info' ), 'general' , 'default' , array($key));
 		endforeach;
 		
 	}
@@ -958,7 +958,7 @@ class ps_multi_languages{
 			$whitelist_options['general'][] = 'blogdescription_' . $key;
 			$whitelist_options['general'][] = 'keyword_' . $key;
 		endforeach;
-		$whitelist_options['general'][] = 'keyword_en';	
+		$whitelist_options['general'][] = 'keyword_' . $this->WPLANGKEY;	
 		return $whitelist_options;
 	}
 	

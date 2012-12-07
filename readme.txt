@@ -49,6 +49,8 @@ wordpress multilingualization.
 * MESSAGE: [012 ps multi languages] 1.2 used wp_editor to  function add_multilingual_content (includes/ps-multilingual-edit-post.php)
 * Fix    : fixed error
 * Fix    : [012 ps multi languages] 1.3 update add_action('the_posts'	to add_filter('the_posts'	.  add add_filter('pre_get_posts') fore function get_posts .
+= Version 1.4 (2012.12.07) =
+* Fix    : [012 ps multi languages] 1.4 update options-general's key_word 
 
 == Screenshots ==
 1. category list
