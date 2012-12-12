@@ -59,6 +59,7 @@ Class ps_multilingual_edit_post {
 			
 			/* edit_post : 投稿記事またはページが更新・編集された際に実行する。これには、コメントが追加・更新された場合（投稿またはページのコメント数が更新される）も含む。 */
 			add_action('edit_post'									, array(&$this,'edit_meta_value'), 10, 2 );
+			add_action('edit_attachment'							, array(&$this,'edit_meta_value'), 10, 2 );
 			
 			/* save_post : インポート機能の利用、記事・ページ編集フォームの利用、XMLRPCでの投稿、メールでの投稿のうちいずれかの方法で記事・ページが作成・更新された際に実行する。 */
 			add_action( 'save_post'									, array( &$this, 'edit_meta_value'), 10, 2 );
@@ -277,6 +278,12 @@ EOF;
             'textarea_name' => "ml_post_content_{$lang}"
         );  
 
+		if ( get_post_type() == "attachment" ){
+			$args = array(
+            	'media_buttons' => false,
+            	'tinymce'       => false, // load TinyMCE, can be used to pass settings directly to TinyMCE using an array()        
+			);
+		}
         $atts = wp_parse_args( $args, $defaults );
         $post_ml_content = get_post_meta($post->ID,'post_content_' . $lang , true );
 
