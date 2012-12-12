@@ -53,6 +53,9 @@ wordpress multilingualization.
 * Fix    : [012 ps multi languages] 1.4 update options-general's key_word 
 = Version 1.5 (2012.12.12) =
 * Fix    : [012 ps multi languages] 1.5 update add_filter's wp_nav_menu Argument problem
+= Version 1.6 (2012.12.12) =
+* Fix    : [012 ps multi languages] 1.6 update media edit page for wp's ver 3.5
+* MESSAGE: [012 ps multi languages] 3.5 Validated
 
 
 == Screenshots ==
