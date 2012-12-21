@@ -59,9 +59,10 @@ wordpress multilingualization.
 
 
 == Screenshots ==
-1. category list
-2. add category
-3. post list
-4. edit post edit page edit custom post
+1. category list.
+2. add category.
+3. post list.
+4. edit post edit page edit custom post.
+
 
 
