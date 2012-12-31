@@ -183,7 +183,8 @@ class ps_multi_languages{
 			//検索対応
 			add_filter('pre_get_posts'									, array( &$this , 'ps_012_m17n_search' ) 					);
 			
-			
+			//admin bar's blogname
+			add_filter('option_blogname'                            	, array( &$this , 'ps_blogname_multilingual' )   			 );
 		endif;
 		
 		$this->init_view_mulit_lang( );		
@@ -394,6 +395,33 @@ class ps_multi_languages{
 		return $show;
 	}
 	
+	/**
+	* ファンクション名： ps_blogname_multilingual
+	* 機能概要：ログイン状態よりフォロートのadmin barのサイト名を表示する
+	* 作成：プライム・ストラテジー株式会社 王 濱
+	* 作成：
+	* 変更：
+	* @param resource
+	* @param int
+	* @param string
+	* @return
+	*/	
+	function ps_blogname_multilingual( $blogname ){
+		$multilingual = $this->get_load_lang( );
+		if ( $multilingual == $this->WPLANGKEY ){
+			return $blogname;
+		}else{
+			if ( $multilingual ){
+				$ml_blogname = get_option( 'blogname_' .  $multilingual );
+			}
+			if ( $ml_blogname ){
+				return $ml_blogname;
+			}else{
+				$multilingual;
+			}
+		}
+	}
+
 	/**
 	* ファンクション名：ps_blog_details_multilingual
 	* 機能概要：子サイトのサイト名を該当言語にする
